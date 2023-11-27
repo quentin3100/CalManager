@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalManager.Pages.CreatePage"
+             Title="CreatePage">
+    <VerticalStackLayout Margin="20">
+        <Label Text="Nom de l'événement" />
+        <Entry x:Name="eventNameEntry" Placeholder="Entrez le nom de l'événement" />
+
+        <Label Text="Emplacement de l'événement" />
+        <Entry x:Name="eventLocationEntry" Placeholder="Entrez l'emplacement de l'événement" />
+
+        <Label Text="Description de l'événement" />
+        <Entry x:Name="eventDescriptionEntry" Placeholder="Entrez la description de l'événement" />
+
+        <Label Text="Date et heure de début" />
+        <DatePicker x:Name="startDatePicker" />
+        <TimePicker x:Name="startTimePicker" />
+
+        <Label Text="Date et heure de fin" />
+        <DatePicker x:Name="endDatePicker" />
+        <TimePicker x:Name="endTimePicker" />
+        
+        <Button Text="Ajouter l'événement" Clicked="OnAddEventClicked" />
+    </VerticalStackLayout>
+</ContentPage>

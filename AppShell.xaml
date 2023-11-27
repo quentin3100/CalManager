@@ -3,13 +3,25 @@
     x:Class="CalManager.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:CalManager"
+    xmlns:local="clr-namespace:CalManager.Pages"
     Shell.FlyoutBehavior="Disabled"
     Title="CalManager">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100" BackgroundColor="DarkSlateBlue">
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="List">
+        <ShellContent Title="List"
+                ContentTemplate="{DataTemplate local:ListPage}" />
+        <ShellContent Title="Create" 
+            ContentTemplate="{DataTemplate local:CreatePage}" />
+        <ShellContent Title="Update" 
+            ContentTemplate="{DataTemplate local:UpdatePage}"/>
+        <ShellContent Title="Delete" 
+            ContentTemplate="{DataTemplate local:DeletePage}"/>
+    </FlyoutItem>
 
 </Shell>
